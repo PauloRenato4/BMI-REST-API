@@ -20,6 +20,7 @@ var BMIController = {
 			result = 0;
 		
 		var callback = function(result) {
+            alert(result);
 			BMIController.showResult(result);			
 		};
 		
@@ -28,8 +29,14 @@ var BMIController = {
 	},
 	
 	showResult: function(result) {
+		var json = JSON.parse(result);
+        
+		
 		var spanResult = document.querySelector('.result');
-		spanResult.innerHTML = result.toFixed(2);
+		spanResult.innerHTML = parseFloat(json.index).toFixed(2);
+		
+		var spanDescription = document.querySelector('.description');
+		spanDescription.innerHTML = json.description;
 		BMIController.showLoading(false);
 	},
 	
