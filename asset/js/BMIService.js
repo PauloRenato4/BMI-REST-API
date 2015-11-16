@@ -2,10 +2,9 @@ var BMIService = {
 
 	getIndex: function(weight, height, callback) {
 		$.ajax({
-		  url: 'services/bmi.action.php',
-		  data: {'weight': weight, 'height': height},
+		  url: 'services/bmi.action.php/bmi/' + weight + '/' + height,
 		  success: function(result) {
-		  	callback(parseFloat(result));
+		  	callback(result);
 		  },
 		  error: function() {
 		  	callback(null);

@@ -1,0 +1,12 @@
+{
+    "name": "root/workspace",
+    "require": {
+        "slim/slim": "^2.6"
+    },
+    "authors": [
+        {
+            "name": "Ricardo Jonas Faria",
+            "email": "ricardo.jonas.faria@gmail.com"
+        }
+    ]
+}

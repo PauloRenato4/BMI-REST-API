@@ -20,7 +20,6 @@ var BMIController = {
 			result = 0;
 		
 		var callback = function(result) {
-            alert(result);
 			BMIController.showResult(result);			
 		};
 		
